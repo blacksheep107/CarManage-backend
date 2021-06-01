@@ -11,12 +11,9 @@
           </el-menu-item-group>
         </el-menu>
       </el-aside>
-
-      <el-main>
-          <keep-alive>
-              <router-view></router-view>
-          </keep-alive>
-      </el-main>
+      <keep-alive>
+          <router-view></router-view>
+      </keep-alive>
     </el-container>
   </el-container>
 </template>
@@ -47,6 +44,6 @@ h3 {
     background-color: #f0f0f0;
     bottom: 0;
     position: fixed;
-    top: 68px;
+    top: 60px;
 }
 </style>
