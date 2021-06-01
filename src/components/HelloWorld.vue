@@ -13,7 +13,7 @@ export default {
   },
   methods:{
     getStart:function(){
-      this.$router.push('allUsers');
+      this.$router.push('tabBar');
     }    
   }
 }
