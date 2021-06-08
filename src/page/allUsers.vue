@@ -6,7 +6,7 @@
         </el-table-column>
         <el-table-column prop="avatarUrl" label="头像">
           <template slot-scope="scope">
-            <img  :src="scope.row.avatarUrl" class="avatar">
+            <img :src="scope.row.avatarUrl" class="avatar">
           </template>
         </el-table-column>
         <el-table-column prop="userName" label="昵称">

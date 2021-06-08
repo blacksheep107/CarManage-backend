@@ -171,6 +171,7 @@ const allUsers=r=>require.ensure([],()=>r(require('@/page/allUsers')),'allUsers'
 const home=r=>require.ensure([],()=>r(require('@/page/home')),'home');
 const findCar=r=>require.ensure([],()=>r(require('@/page/findCar')),'findCar');
 const tabBar=r=>require.ensure([],()=>r(require('@/page/tabBar')),'tabBar');
+const carInfo=r=>require.ensure([],()=>r(require('@/page/carInfo')),'carInfo');
 
 const routes=[
   {
@@ -189,13 +190,18 @@ const routes=[
       {
         path:'/findCar',
         component:findCar
+      },
+      {
+        path:'/carInfo',
+        component:carInfo,
       }
     ]
   },
 ]
 const router=new VueRouter({
   routes
-})
+});
+
 new Vue({
   router,
   render: h => h(App),

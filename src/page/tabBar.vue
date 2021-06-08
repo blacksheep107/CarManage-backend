@@ -8,6 +8,7 @@
           <el-menu-item-group>
             <el-menu-item index="allUsers">所有用户</el-menu-item>
             <el-menu-item index="findCar">车牌管理</el-menu-item>
+            <el-menu-item index="carInfo">车辆情况</el-menu-item>
           </el-menu-item-group>
         </el-menu>
       </el-aside>
