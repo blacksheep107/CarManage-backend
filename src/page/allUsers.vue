@@ -24,7 +24,7 @@ export default {
   name: 'allUsers',
   methods:{
     initData(){
-      axios.get('api/user/findAll').then(res=>{
+      axios.get('user/findAll').then(res=>{
         this.usersdata=res.data.data;
       })
     }

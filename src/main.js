@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import 'element-ui/lib/theme-chalk/index.css';
 import VueRouter from 'vue-router';
+import axios from "axios";
 import {
   Pagination,
   Dialog,
@@ -201,7 +202,7 @@ const routes=[
 const router=new VueRouter({
   routes
 });
-
+axios.defaults.baseURL="https://qizong007.top";
 new Vue({
   router,
   render: h => h(App),

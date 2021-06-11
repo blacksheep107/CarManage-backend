@@ -13,7 +13,7 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 export default {
   name: 'carInfo',
   mounted() {
-    axios.get('api/message/getPositions').then(res=>{
+    axios.get('message/getPositions').then(res=>{
         this.citys=res.data;
         AMapLoader.load({
             "key": "37a3fd50dee86a0ebf48322f0d3e434a", // 申请好的Web端开发者Key，首次调用 load 时必填

@@ -66,7 +66,7 @@ export default {
       this.relatives=[];
       this.personInfo={};
       this.relativesname={};
-      axios.get('api/vehicle/search',{
+      axios.get('vehicle/search',{
         params:{
           licensePlate:this.carnum
         }
@@ -76,7 +76,7 @@ export default {
           this.$message.error('没找到车牌！');
         }else{
           this.carInfo=res.data.data;
-          axios.get('api/user/getInfo',{
+          axios.get('user/getInfo',{
             params:{
               userId:res.data.data.carOwnerId
             }
@@ -85,7 +85,7 @@ export default {
             if(res1.data.code==0){
               this.personInfo=res1.data.data;
               for(let i=0;i<res1.data.data.vehicles.length;i++){
-                axios.get('api/vehicle/findById',{
+                axios.get('vehicle/findById',{
                   params:{
                     vehicleId:res1.data.data.vehicles[i]
                   }
@@ -95,7 +95,7 @@ export default {
                 })
               }
               for(let i=0;i<res1.data.data.relatives.length;i++){
-                axios.get('api/user/getInfo',{
+                axios.get('user/getInfo',{
                   params:{
                     userId:res1.data.data.relatives[i]
                   }
