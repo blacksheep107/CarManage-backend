@@ -173,6 +173,7 @@ const home=r=>require.ensure([],()=>r(require('@/page/home')),'home');
 const findCar=r=>require.ensure([],()=>r(require('@/page/findCar')),'findCar');
 const tabBar=r=>require.ensure([],()=>r(require('@/page/tabBar')),'tabBar');
 const carInfo=r=>require.ensure([],()=>r(require('@/page/carInfo')),'carInfo');
+const feedback=r=>require.ensure([],()=>r(require('@/page/feedback')),'feedback');
 
 const routes=[
   {
@@ -195,7 +196,11 @@ const routes=[
       {
         path:'/carInfo',
         component:carInfo,
-      }
+      },
+      {
+        path:'/feedback',
+        component:feedback,
+      },
     ]
   },
 ]
@@ -203,6 +208,7 @@ const router=new VueRouter({
   routes
 });
 axios.defaults.baseURL="https://qizong007.top";
+axios.defaults.headers['Content-Type'] = 'text/plain';
 new Vue({
   router,
   render: h => h(App),
